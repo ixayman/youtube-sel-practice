@@ -1,0 +1,10 @@
+{
+    "browser": "Firefox",
+    "home_page": "https://www.youtube.com/",
+    "adele-hello": "https://www.youtube.com/watch?v=YQHsXMglC9A",
+    "search_query" : "Adele - Hello",
+    "adele-hello-minimum-likes": 200,
+    "short_video_max": 240,
+    "medium_video_max": 1200
+
+}
