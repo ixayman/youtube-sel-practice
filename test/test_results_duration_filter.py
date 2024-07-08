@@ -27,6 +27,7 @@ class TestResultDurationFilter(unittest.TestCase):
         cls.driver.close()
 
     def test_short_videos_filter(self):
+        time.sleep(2)
         self.result_page.click_filter_button()
         time.sleep(2)
         self.result_page.click_Search_for_Under_4_minutes()
@@ -37,6 +38,7 @@ class TestResultDurationFilter(unittest.TestCase):
             self.assertGreaterEqual(self.config.get_value(self, "short_video_max"), t)
 
     def test_medium_videos_filter(self):
+        time.sleep(2)
         self.result_page.click_filter_button()
         time.sleep(2)
         self.result_page.click_Search_for_4_to_20_minutes()
@@ -48,6 +50,7 @@ class TestResultDurationFilter(unittest.TestCase):
             self.assertLessEqual(self.config.get_value(self, "short_video_max"), t)
 
     def test_long_videos_filter(self):
+        time.sleep(2)
         self.result_page.click_filter_button()
         time.sleep(2)
         self.result_page.click_search_for_over_20_minutes()

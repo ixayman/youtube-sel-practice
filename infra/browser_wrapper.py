@@ -28,8 +28,8 @@ class BrowserWrapper:
 
             url = self._config.get(page)
             if url:
-                self._driver.get(url)
                 self._driver.maximize_window()
+                self._driver.get(url)
                 try:
                     WebDriverWait(self._driver, 10).until(
                         ec.presence_of_element_located((By.XPATH, '//body'))

@@ -7,12 +7,13 @@ from infra.utils import check_if_array_in_descending_order
 from logic.video_page import VideoPage
 
 
-class TestDeviceTheme(unittest.TestCase):
+class TestSortComments(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.browser = BrowserWrapper()
         cls.driver = cls.browser.get_driver("adele-hello")
         cls.config = ConfigProvider()
+        time.sleep(5)
         cls.driver.execute_script("window.scrollTo(0, 600)")
         time.sleep(2)
         cls.video_page = VideoPage(cls.driver)

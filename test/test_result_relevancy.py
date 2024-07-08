@@ -7,7 +7,7 @@ from logic.home_page import HomePage
 from logic.results_page import ResultsPage
 
 
-class TestResultDurationFilter(unittest.TestCase):
+class TestResultRelevancy(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.browser = BrowserWrapper()

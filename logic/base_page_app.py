@@ -1,3 +1,5 @@
+import time
+
 from selenium.common import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -32,6 +34,7 @@ class BasePageApp(BasePage):
 
     def click_theme_menu(self):
         self._settings_dropdown_button.click()
+        time.sleep(2)
         try:
             appearance = self._driver.find_element(By.XPATH, '//ytd-toggle-theme-compact-link-renderer')
             appearance.click()
@@ -40,6 +43,7 @@ class BasePageApp(BasePage):
 
     def click_light_theme(self):
         self.click_theme_menu()
+        time.sleep(2)
         try:
             light_theme = self._driver.find_element(By.XPATH, '//yt-formatted-string[contains(text(), "Light theme")]')
             light_theme.click()
@@ -48,6 +52,7 @@ class BasePageApp(BasePage):
 
     def click_dark_theme(self):
         self.click_theme_menu()
+        time.sleep(2)
         try:
             dark_theme = self._driver.find_element(By.XPATH, '//yt-formatted-string[contains(text(), "Dark theme")]')
             dark_theme.click()
@@ -63,6 +68,7 @@ class BasePageApp(BasePage):
 
     def click_language_menu(self):
         self._settings_dropdown_button.click()
+        time.sleep(2)
         try:
             language = self._driver.find_element(By.XPATH, '//yt-formatted-string[contains(text(), "Language:")]')
             language.click()
@@ -71,6 +77,7 @@ class BasePageApp(BasePage):
 
     def click_english_language(self):
         self.click_language_menu()
+        time.sleep(2)
         try:
             english = self._driver.find_element(By.XPATH, '//yt-formatted-string[contains(text(), "English (US)")]')
             english.click()
@@ -79,6 +86,7 @@ class BasePageApp(BasePage):
 
     def click_hebrew_language(self):
         self.click_language_menu()
+        time.sleep(2)
         try:
             english = self._driver.find_element(By.XPATH, '//yt-formatted-string[contains(text(), "עברית")]')
             english.click()

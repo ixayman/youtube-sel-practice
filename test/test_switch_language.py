@@ -6,7 +6,7 @@ from infra.config_provider import ConfigProvider
 from logic.home_page import HomePage
 
 
-class TestDeviceTheme(unittest.TestCase):
+class TestSwitchLanguage(unittest.TestCase):
     @classmethod
     def setUp(cls):
         cls.browser = BrowserWrapper()
